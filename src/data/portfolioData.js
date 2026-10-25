@@ -1,151 +1,166 @@
 /**
  * PORTFOLIO DATA CONFIGURATION
- * 
- * You can easily customize your personal details, links, and projects here.
- * Once you provide your exact details, simply replace the placeholders below.
+ * Real projects & profile information for Sagar Suthar
  */
 
 export const profileData = {
   // 1. Profile Information
   name: "Sagar Suthar",
-  role: "Freelance Full-Stack Developer & AI Engineer",
-  tagline: "Building high-performance web applications, modern UI/UX, and intelligent automation systems for forward-thinking clients worldwide.",
+  role: "AI Engineer & Full-Stack Developer • Founder @ BuilderHut",
+  tagline: "Building data-backed AI systems that scale, geospatial intelligence platforms, and high-performance interactive software with end-to-end architecture.",
   
   // Status badge shown over profile
-  availabilityBadge: "Available for new projects",
+  availabilityBadge: "Available for freelance & consulting",
   
-  // Profile Image (Replace with your own photo path or image URL)
-  // You can put an image in 'public/profile.jpg' and set avatar: '/profile.jpg'
-  avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80",
+  // Profile Image (from myPic/me.png)
+  avatar: "./profile.png",
   
   // Direct Contact Details
-  email: "sagar.suthar.freelance@gmail.com",
-  contact: "+91 98765 43210", // Phone number / WhatsApp
+  email: "sagarsuthar.work@gmail.com",
+  contact: "Available on LinkedIn / Email",
   location: "India • Available Worldwide (Remote)",
   
   // Social & Portfolio Redirect Links
-  linkedin: "https://www.linkedin.com/in/sagar-suthar",
-  notion: "https://sagar-portfolio.notion.site",
-  github: "https://github.com/SagarSuthar210", // Optional bonus link
+  linkedin: "https://www.linkedin.com/in/sagar-suthar-9847a6377/?isSelfProfile=true",
+  notion: "https://standing-neighbor-7b2.notion.site/Sagar-Suthar-Projects-2cf612181d618067b91adea0af06850d?pvs=74",
   
-  // Quick Stats
-  stats: [
-    { label: "Completed Projects", value: "24+" },
-    { label: "Client Satisfaction", value: "100%" },
-    { label: "Years Experience", value: "3+" },
-    { label: "Avg Delivery Time", value: "2 Weeks" },
-  ]
+  // Extended Bio from Notion
+  bio: "AI Engineer focused on building data-backed AI systems that scale — currently Founder of BuilderHut, an AI-powered land feasibility platform. Background spans applied data science (deep learning for real estate forecasting, IoT-driven ML devices) and 4+ years of game development, founding Hurrica Studio and shipping published Unity/C# titles. Comfortable owning a product end-to-end, from architecture to deployment."
 };
 
 export const projectCategories = [
   "All",
-  "Full Stack",
-  "AI & Automation",
-  "E-Commerce",
-  "SaaS"
+  "AI & Data Science",
+  "Backend & SaaS",
+  "Game Dev & 3D",
+  "IoT & Embedded"
 ];
 
 export const projectsData = [
   {
-    id: "omni-ai",
-    title: "OmniAI - Workflow Automation Platform",
-    category: "AI & Automation",
-    tagline: "Enterprise workflow automation platform integrating custom LLM pipelines, autonomous agents, and analytics.",
-    description: "OmniAI empowers operations teams to automate repetitive tasks across databases, CRM systems, and customer messaging. Built with a responsive React frontend, Node.js microservices, and integrated vector search for instant semantic document querying.",
-    thumbnail: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80",
-    tags: ["React", "Node.js", "OpenAI API", "PostgreSQL", "TailwindCSS"],
+    id: "builderhut",
+    title: "BuilderHut",
+    category: "Backend & SaaS",
+    tagline: "AI-powered land feasibility platform that evaluates parcels, bringing up economic & context-aware paths in seconds.",
+    description: "BuilderHut fuses geospatial infrastructure data, high-resolution satellite imagery, nearby commercial points of interest, and grounded economic & municipal regulatory data into a single stream of AI reasoning. It delivers rich, data-backed feasibility reports, assists users in listing and discovering parcels under specific contextual constraints, and creates complex AI real estate portfolios with simplified decision-making.",
+    thumbnail: "./projects/builderhut.png",
+    tags: ["AI Intelligence", "Geospatial Data", "Satellite Imagery", "Full-Stack SaaS", "FastAPI", "React"],
     features: [
-      "Real-time visual node-based workflow builder",
-      "Sub-200ms semantic search with vector embeddings",
-      "Stripe billing and tiered team subscription management",
-      "End-to-end audit logging & role-based access control"
+      "Multi-modal fusion of geospatial, zoning, infrastructure, and satellite imagery",
+      "Instant economic and context-aware land feasibility generation",
+      "Portfolio decision engine evaluating listed parcels against custom feasibility constraints",
+      "End-to-end scalable backend architecture with grounded regulatory data streams"
     ],
-    liveUrl: "https://example.com/omniai",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://builderhut.co",
+    linkLabel: "Visit Live Platform",
+    githubUrl: null, // Codebase private
   },
   {
-    id: "novaflow",
-    title: "NovaFlow - Realtime Collaboration Hub",
-    category: "Full Stack",
-    tagline: "Interactive team whiteboard and document co-authoring engine with low-latency WebSocket synchronization.",
-    description: "A fast, collaborative workspace that allows distributed product teams to brainstorm, map architectures, and draft specifications together. Utilizes CRDTs (Conflict-free Replicated Data Types) for seamless multi-cursor live editing with offline support.",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80",
-    tags: ["TypeScript", "Next.js", "WebSockets", "Redis", "Framer Motion"],
+    id: "neoeternal",
+    title: "NeoEternal",
+    category: "Game Dev & 3D",
+    tagline: "3D endless tunnel escape game built with Unity, blending responsive mechanics with stunning visual design.",
+    description: "A fast-paced 3D endless runner and tunnel escape game developed in Unity/C#. Features custom procedural tunnel generation, dynamic obstacle spawning, high-speed physics handling, and a modular architecture. Accompanied by a comprehensive Game Design Document (GDD) and technical design specification.",
+    thumbnail: "./projects/neoeternal.png",
+    tags: ["Unity", "C#", "3D Graphics", "Procedural Generation", "Game Design", "Shader Graph"],
     features: [
-      "Ultra low-latency multi-user cursor tracking (<30ms)",
-      "Infinite canvas with vector shape rendering and markdown docs",
-      "Export directly to PDF, PNG, and Notion workspace",
-      "Encrypted team rooms with single-sign-on (SSO)"
+      "Custom 3D tunnel navigation and high-speed momentum physics",
+      "Dynamic procedural obstacle generation with adaptive pacing",
+      "Optimized rendering pipeline for consistent high-framerate gameplay",
+      "Full technical Game Design Document (GDD) & obstacle hierarchy"
     ],
-    liveUrl: "https://example.com/novaflow",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Game-projects-2cf612181d6180eb86facaa7c7af7e7e?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
   },
   {
-    id: "auracommerce",
-    title: "AuraStore - Headless Luxury Commerce",
-    category: "E-Commerce",
-    tagline: "Ultra-fast headless e-commerce storefront with 3D product previews, instant search, and one-click checkout.",
-    description: "Built for a premium lifestyle brand aiming for lightning-fast page speeds and exceptional brand appeal. Achieved 99+ Google Lighthouse performance scores, dynamic currency localization, and seamless Shopify Storefront API synchronization.",
-    thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
-    tags: ["React 19", "Tailwind CSS", "Shopify API", "Stripe", "Three.js"],
+    id: "geoslick-ai",
+    title: "GeoSlick AI",
+    category: "AI & Data Science",
+    tagline: "Web-based decision-support system for offshore oil spill detection using Sentinel-1 SAR imagery and U-Net.",
+    description: "A comprehensive oil spill monitoring system. An analyst defines an Area of Interest (AOI) on a Sentinel-1 SAR scene, and a custom four-level U-Net deep learning model segments oil-slick pixels. Slicks are traced backward in time using Copernicus Marine ocean currents and ECMWF ERA5 wind vectors to estimate origin points, matching nearby AIS vessel positions to rank attribution leads.",
+    thumbnail: "./projects/geoslick.png",
+    tags: ["PyTorch", "U-Net", "Sentinel-1 SAR", "Copernicus Marine", "AIS Tracking", "Flask", "Gemini API"],
     features: [
-      "Interactive 3D product viewer using WebGL/Three.js",
-      "Instant algorithmic product search and category filtering",
-      "Optimized checkout pipeline with 28% higher conversion rate",
-      "International multi-currency and geo-localized shipping rates"
+      "Four-level U-Net segmentation trained with BCE + Dice loss on SAR image-mask pairs",
+      "Backward drift tracing converting surface current and ERA5 wind vectors into pixel displacements",
+      "AIS vessel trajectory attribution scoring and top-15 lead candidate ranking",
+      "Interactive Flask & Canvas frontend with integrated Gemini intelligence summaries"
     ],
-    liveUrl: "https://example.com/aurastore",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Data-Science-ML-projects-2cf612181d6180559945e760a5b711e3?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
   },
   {
-    id: "pulsemetrics",
-    title: "PulseMetrics - Cloud Telemetry SaaS",
-    category: "SaaS",
-    tagline: "Developer telemetry and microservice observability platform with real-time alerting and intuitive charts.",
-    description: "Designed and built an observability portal for engineering leads to monitor API endpoints, cloud costs, and error rates. Features customizable KPI dashboards, dark-mode first visualization, and Discord/Slack webhook notifications.",
-    thumbnail: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1000&q=80",
-    tags: ["React", "TailwindCSS", "Recharts", "FastAPI", "Docker"],
+    id: "curlbands",
+    title: "CurlBands",
+    category: "IoT & Embedded",
+    tagline: "AI wrist-based exercise form analyzer using dual-band IMU sensors and Dynamic Time Warping (DTW).",
+    description: "A dual-band IoT wearable system for real-time exercise form feedback during bicep curls. Worn on both wrists, it captures angular kinematics using MPU6050 IMU sensors and transmits pitch & roll via Bluetooth Low Energy (BLE) to an Android companion app. Uses Dynamic Time Warping (DTW) to compare user repetitions against trained form templates, outputting instant GOOD or BAD rep grading.",
+    thumbnail: "./projects/curlbands.png",
+    tags: ["IoT Wearable", "MPU6050 IMU", "Bluetooth Low Energy", "Dynamic Time Warping", "Android", "Embedded C++"],
     features: [
-      "Customizable drag-and-drop metric widget layout",
-      "Configurable threshold alerts sent to Slack and Email",
-      "Historical data aggregation handling 1M+ daily data points",
-      "Exportable executive reports in Excel and PDF formats"
+      "Real-time dual-wrist inertial motion capture streaming over BLE",
+      "Dynamic Time Warping (DTW) algorithm for temporal template matching",
+      "Immediate visual feedback on mobile interface (Green for GOOD / Red for BAD)",
+      "Helps prevent workout injuries with solo personal trainer guidance"
     ],
-    liveUrl: "https://example.com/pulsemetrics",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Data-Science-ML-projects-2cf612181d6180559945e760a5b711e3?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
   },
   {
-    id: "zenith-agent",
-    title: "Zenith - Customer Support AI Agent",
-    category: "AI & Automation",
-    tagline: "Autonomous customer resolution agent trained on custom company documentation and ticketing history.",
-    description: "An AI-powered concierge that handles 65% of customer support queries autonomously without human intervention. Features sentiment analysis, automated ticket escalation, and bilingual communication capabilities.",
-    thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
-    tags: ["Python", "LangChain", "React", "Tailwind", "Supabase"],
+    id: "ai-cops-escape",
+    title: "AI Infinite Cops Escape",
+    category: "Game Dev & 3D",
+    tagline: "3D procedural vehicular escape game featuring adaptive pursuit AI and infinite generative environments.",
+    description: "An adrenaline-fueled 3D car chase escape game developed in Unity/C#. Features adversarial pursuit vehicle AI that dynamically navigates around hurdles to intercept the player, coupled with an infinite generative road map and unpredictable obstacles.",
+    thumbnail: "./projects/cops.png",
+    tags: ["Unity", "C#", "Pursuit AI", "Procedural World Gen", "Vehicle Physics"],
     features: [
-      "Autonomous resolution of tier-1 support tickets",
-      "Smart sentiment escalation to human agents via Zendesk",
-      "Real-time analytics on customer satisfaction & query trends",
-      "Embedded chat widget with customizable brand styling"
+      "Adversarial cop car pathfinding and intercept tactics",
+      "Infinite dynamic map chunk generation with progressive difficulty",
+      "Realistic arcade vehicle drifting physics and collision response",
+      "Optimized object pooling for smooth mobile and desktop performance"
     ],
-    liveUrl: "https://example.com/zenith-ai",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Game-projects-2cf612181d6180eb86facaa7c7af7e7e?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
   },
   {
-    id: "cryptosphere",
-    title: "ApexPay - Fintech Settlement Gateway",
-    category: "Full Stack",
-    tagline: "Cross-border payment invoicing and multi-currency wallet dashboard designed for global contractors.",
-    description: "A financial dashboard designed specifically for international freelancers and digital agencies. Simplifies multi-currency invoicing, automatic tax estimation, and fast local bank transfers.",
-    thumbnail: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1000&q=80",
-    tags: ["React", "Express", "PostgreSQL", "TailwindCSS", "Chart.js"],
+    id: "land-price-predictor",
+    title: "Land Price Predictor",
+    category: "AI & Data Science",
+    tagline: "Deep learning predictive engine for real estate land valuation using spatial features and historical sales.",
+    description: "An applied data science model engineered to forecast land and parcel valuations. Leverages multi-variable feature extraction from historical land transaction records, geographic amenity density, infrastructure proximity, and market velocity to yield data-backed appraisal estimates.",
+    thumbnail: "./projects/landprice.png",
+    tags: ["Deep Learning", "Data Science", "Python", "Spatial Analysis", "Scikit-Learn"],
     features: [
-      "One-click professional PDF invoice generation",
-      "Multi-currency conversion with real-time exchange rates",
-      "Automated recurring client billing and payment reminders",
-      "Bank-grade SSL encryption and 2-Factor Authentication"
+      "Multi-factor valuation pipeline synthesizing municipal land data",
+      "High accuracy regression modeling benchmarked against actual market transactions",
+      "Interactive data visualizations demonstrating price distribution and feature importance",
+      "Foundation model research directly empowering commercial feasibility platforms"
     ],
-    liveUrl: "https://example.com/apexpay",
-    githubUrl: "https://github.com/SagarSuthar210",
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Data-Science-ML-projects-2cf612181d6180559945e760a5b711e3?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
+  },
+  {
+    id: "spider-ball",
+    title: "Spider Ball",
+    category: "Game Dev & 3D",
+    tagline: "2D physics navigation game where players control a dynamic sphere endowed with spider climbing abilities.",
+    description: "A physics-driven 2D puzzle-platformer created in Unity. Players navigate complex geometric obstacle courses controlling a sphere with spider-like adhesion, wall climbing, and grappling mechanics, requiring precision timing and momentum management.",
+    thumbnail: "./projects/spiderball.png",
+    tags: ["Unity", "2D Physics", "Kinematics", "C#", "Level Design"],
+    features: [
+      "Dynamic surface adhesion and omni-directional wall climbing",
+      "Momentum-based pendulum swing and grapple mechanics",
+      "Custom obstacle hazards and moving environmental traps",
+      "Fluid particle feedback and responsive touch/keyboard controls"
+    ],
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Game-projects-2cf612181d6180eb86facaa7c7af7e7e?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
   }
 ];

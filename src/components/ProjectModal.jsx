@@ -144,7 +144,7 @@ export default function ProjectModal({ project, onClose }) {
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-xs sm:text-sm font-semibold shadow-lg shadow-indigo-600/25 transition-all hover:-translate-y-0.5"
             >
               <Globe className="w-4 h-4" />
-              <span>Visit Live Project</span>
+              <span>{project.linkLabel || 'View Project'}</span>
               <ExternalLink className="w-3.5 h-3.5 opacity-80" />
             </a>
           )}
