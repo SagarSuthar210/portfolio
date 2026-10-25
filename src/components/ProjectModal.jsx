@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, CheckCircle2, Globe, Tag, Sparkles } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2, Globe, Tag, Sparkles, Gamepad2 } from 'lucide-react';
 import { GithubIcon } from './BrandIcons';
 
 export default function ProjectModal({ project, onClose }) {
@@ -52,11 +52,21 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Project Thumbnail Image */}
         <div className="relative w-full h-52 sm:h-64 bg-slate-950 overflow-hidden">
-          <img
-            src={project.thumbnail}
-            alt={project.title}
-            className="w-full h-full object-cover"
-          />
+          {project.thumbnail ? (
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-950 p-6 text-center">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-2 shadow-lg">
+                <Gamepad2 className="w-6 h-6" />
+              </div>
+              <span className="text-sm font-semibold text-slate-200">Interactive Game Concept & Mechanics</span>
+              <span className="text-xs text-slate-500 mt-1">Full design architecture & details available on Notion</span>
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/30 to-transparent" />
           
           <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between">

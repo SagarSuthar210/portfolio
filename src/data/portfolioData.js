@@ -151,7 +151,7 @@ export const projectsData = [
     category: "Game Dev & 3D",
     tagline: "2D physics navigation game where players control a dynamic sphere endowed with spider climbing abilities.",
     description: "A physics-driven 2D puzzle-platformer created in Unity. Players navigate complex geometric obstacle courses controlling a sphere with spider-like adhesion, wall climbing, and grappling mechanics, requiring precision timing and momentum management.",
-    thumbnail: "./projects/spiderball.png",
+    thumbnail: null,
     tags: ["Unity", "2D Physics", "Kinematics", "C#", "Level Design"],
     features: [
       "Dynamic surface adhesion and omni-directional wall climbing",

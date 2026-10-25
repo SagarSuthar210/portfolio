@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Layers, ArrowUpRight, Search } from 'lucide-react';
+import { Layers, ArrowUpRight, Search, Gamepad2 } from 'lucide-react';
 
 export default function ProjectGrid({ projects, categories, onSelectProject }) {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -98,12 +98,22 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
             >
               {/* Compact Thumbnail Container */}
               <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-950">
-                <img
-                  src={project.thumbnail}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+                {project.thumbnail ? (
+                  <img
+                    src={project.thumbnail}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-950 p-4 text-center">
+                    <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-1.5 group-hover:scale-110 transition-transform">
+                      <Gamepad2 className="w-4 h-4" />
+                    </div>
+                    <span className="text-[11px] font-semibold text-slate-300">Concept & Mechanics</span>
+                    <span className="text-[10px] text-slate-500">Documented on Notion</span>
+                  </div>
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
                 
                 {/* Category Pill Over Thumbnail */}
