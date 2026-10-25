@@ -16,8 +16,8 @@ export const profileData = {
   avatar: "./profile.png",
   
   // Direct Contact Details
-  email: "sagarsuthar.work@gmail.com",
-  contact: "Available on LinkedIn / Email",
+  email: "sagarsuthar3385o@gmail.com",
+  contact: "+91 9351884300",
   location: "India • Available Worldwide (Remote)",
   
   // Social & Portfolio Redirect Links
