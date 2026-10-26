@@ -5,11 +5,12 @@ import {
   Copy, 
   Check, 
   ExternalLink,
-  ChevronDown
+  ChevronDown,
+  Zap
 } from 'lucide-react';
 import { LinkedInIcon, NotionIcon } from './BrandIcons';
 
-export default function HeaderProfile({ profile, onCopyToast }) {
+export default function HeaderProfile({ profile, onCopyToast, onOpenTaskModal }) {
   const [copiedType, setCopiedType] = useState(null);
 
   const handleCopy = (text, type, label) => {
@@ -117,7 +118,7 @@ export default function HeaderProfile({ profile, onCopyToast }) {
       </div>
 
       {/* 5. Two Primary Buttons (Redirecting to LinkedIn and Notion) */}
-      <div className="flex items-center justify-center gap-3 w-full max-w-sm mb-3.5">
+      <div className="flex items-center justify-center gap-3 w-full max-w-sm mb-3">
         {/* LinkedIn Button */}
         <a
           href={profile.linkedin}
@@ -141,6 +142,22 @@ export default function HeaderProfile({ profile, onCopyToast }) {
           <span>Notion Hub</span>
           <ExternalLink className="w-3.5 h-3.5 opacity-70" />
         </a>
+      </div>
+
+      {/* 6. Prominent "Assign me a task!" Button (Most Highlighted, Standout Green CTA) */}
+      <div className="w-full max-w-sm mb-4">
+        <button
+          onClick={onOpenTaskModal}
+          className="group relative w-full inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 via-green-500 to-teal-500 hover:from-emerald-400 hover:via-green-400 hover:to-teal-400 text-slate-950 font-extrabold text-sm sm:text-base tracking-wide shadow-xl shadow-emerald-500/30 hover:shadow-emerald-500/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer border border-emerald-300/40"
+        >
+          {/* Subtle pulse badge ring */}
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-900 opacity-60"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-slate-950"></span>
+          </span>
+          <Zap className="w-4 h-4 text-slate-950 fill-slate-950" />
+          <span>Assign me a task!</span>
+        </button>
       </div>
 
       {/* Scroll Down Indicator */}

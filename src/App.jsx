@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import HeaderProfile from './components/HeaderProfile';
 import ProjectGrid from './components/ProjectGrid';
 import ProjectModal from './components/ProjectModal';
+import TaskAssignModal from './components/TaskAssignModal';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
 import { profileData, projectCategories, projectsData } from './data/portfolioData';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [taskModalOpen, setTaskModalOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState(null);
 
   const showToast = (msg) => {
@@ -28,7 +30,8 @@ export default function App() {
         {/* Top Middle Section: Profile Image, Name, Email, Contact, LinkedIn & Notion buttons */}
         <HeaderProfile 
           profile={profileData} 
-          onCopyToast={showToast} 
+          onCopyToast={showToast}
+          onOpenTaskModal={() => setTaskModalOpen(true)}
         />
 
         {/* Projects Section: 3-Tile Row Grid */}
@@ -49,6 +52,13 @@ export default function App() {
           onClose={() => setSelectedProject(null)}
         />
       )}
+
+      {/* Task Assignment & Razorpay Payment Modal */}
+      <TaskAssignModal
+        isOpen={taskModalOpen}
+        onClose={() => setTaskModalOpen(false)}
+        onToast={showToast}
+      />
 
       {/* Floating Feedback Toast */}
       <Toast message={toastMessage} />
