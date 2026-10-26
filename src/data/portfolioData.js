@@ -30,13 +30,32 @@ export const profileData = {
 
 export const projectCategories = [
   "All",
-  "AI & Data Science",
+  "Frontend & Web",
   "Backend & SaaS",
+  "AI & Data Science",
   "Game Dev & 3D",
   "IoT & Embedded"
 ];
 
 export const projectsData = [
+  {
+    id: "south-chicago-buffet",
+    title: "South Chicago Buffet",
+    category: "Frontend & Web",
+    tagline: "High-conversion digital storefront and interactive menu experience for Chicagoland's premier all-you-can-eat gastronomy restaurant.",
+    description: "A modern, highly responsive restaurant web application engineered for South Chicago Buffet (Burbank, IL). Features dynamic navigation across 120+ culinary items and food stations (Texas BBQ, Carved Prime Rib, Alaskan Snow Crab, Asian Wok, Artisan Desserts), an interactive 'My Plate' selection experience, table reservation workflows, and branch location guides.",
+    thumbnail: "./projects/southchicagobuffet.png",
+    tags: ["React", "Tailwind CSS", "Modern UI/UX", "Interactive Menu", "Responsive Web Design"],
+    features: [
+      "Dynamic station-by-station culinary exploration with 120+ items",
+      "Interactive 'My Plate' dish curator and feast planning tool",
+      "Streamlined table reservation & visit planning flows for Burbank/Chicago branches",
+      "High-conversion mobile-first performance and responsive gastronomy visual aesthetic"
+    ],
+    liveUrl: "https://southchicagobuffet.surge.sh/",
+    linkLabel: "Visit Live Website",
+    githubUrl: null,
+  },
   {
     id: "builderhut",
     title: "BuilderHut",
