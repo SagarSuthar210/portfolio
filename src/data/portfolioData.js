@@ -39,6 +39,24 @@ export const projectCategories = [
 
 export const projectsData = [
   {
+    id: "the-nyc-fashion",
+    title: "The NYC Fashion",
+    category: "Frontend & Web",
+    tagline: "Luxury haute couture digital storefront and bespoke VIP fitting suite tailored for high-end fashion clientele.",
+    description: "A high-end editorial digital storefront and bespoke shopping experience engineered for The NYC Fashion (SoHo, New York). Features micro-batch collection showcases, curated seasonal lines, interactive VIP fitting suite reservation flows, boutique flagship locators across NYC, and an interactive personal 'Fitting Bag' styling curator.",
+    thumbnail: "./projects/thenycfashion.png",
+    tags: ["React", "Luxury UI/UX", "Tailwind CSS", "Editorial Design", "E-Commerce", "Responsive Web"],
+    features: [
+      "Editorial-grade high-fashion visual design with bespoke typography & micro-interactions",
+      "Interactive VIP fitting suite reservation & private styling tier consultation booking",
+      "Curated micro-batch collection explorer with localized SoHo flagship and boutique guides",
+      "Integrated 'Fitting Bag' wardrobe planner for private showroom fittings"
+    ],
+    liveUrl: "https://thenycfashion.surge.sh/",
+    linkLabel: "Visit Live Website",
+    githubUrl: null,
+  },
+  {
     id: "south-chicago-buffet",
     title: "South Chicago Buffet",
     category: "Frontend & Web",
