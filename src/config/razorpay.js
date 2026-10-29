@@ -15,7 +15,7 @@ export const RAZORPAY_KEY_ID = "rzp_live_TI4o48iSjZJxEa"; // ← Replace with yo
 //   Render:  "https://portfolio-pay.onrender.com"
 //   Vercel:  "https://portfolio-pay.vercel.app"
 //   Railway: "https://portfolio-pay.up.railway.app"
-export const PAYMENT_BACKEND_URL = "https://YOUR-BACKEND-URL.onrender.com"; // ← Replace after deploying
+export const PAYMENT_BACKEND_URL = "https://portfolio-7zne.onrender.com"; // ← Replace after deploying
 
 // Currency (USD for international clients)
 export const PAYMENT_CURRENCY = "USD";
