@@ -20,10 +20,10 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
   return (
     <section id="projects" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-3 pb-12">
       {/* Section Header & Filters Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3 border-b border-slate-800/80 pb-3">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3 border-b border-slate-200/90 pb-3">
         <div>
-          <h2 className="text-lg sm:text-xl font-bold text-white font-heading flex items-center gap-2">
-            <Layers className="w-4 h-4 text-indigo-400" />
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-heading flex items-center gap-2">
+            <Layers className="w-4 h-4 text-indigo-600" />
             <span>Featured Projects</span>
             <span className="text-xs font-normal text-slate-500">({filteredProjects.length})</span>
           </h2>
@@ -37,12 +37,12 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
             placeholder="Search projects..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl bg-slate-900/90 border border-slate-800 text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+            className="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl bg-white border border-slate-200 text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 shadow-xs transition-colors"
           />
           {searchQuery && (
             <button 
               onClick={() => setSearchQuery("")}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-slate-700"
             >
               ✕
             </button>
@@ -60,7 +60,7 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
               className={`px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap transition-all duration-150 cursor-pointer ${
                 activeCategory === cat
                   ? "bg-indigo-600 text-white shadow-sm shadow-indigo-600/30 font-semibold"
-                  : "bg-slate-900/60 text-slate-400 hover:text-slate-200 hover:bg-slate-800/60 border border-slate-800/80"
+                  : "bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-50 border border-slate-200 shadow-xs"
               }`}
             >
               {cat}
@@ -71,11 +71,11 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
 
       {/* 3 Tiles in a Single Row Horizontally (Compact 3-Column Grid) */}
       {filteredProjects.length === 0 ? (
-        <div className="text-center py-10 px-4 rounded-2xl bg-slate-900/30 border border-slate-800">
-          <p className="text-slate-400 text-xs">No projects matched your criteria.</p>
+        <div className="text-center py-10 px-4 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <p className="text-slate-500 text-xs">No projects matched your criteria.</p>
           <button
             onClick={() => { setActiveCategory("All"); setSearchQuery(""); }}
-            className="mt-2.5 px-3 py-1 rounded-lg bg-indigo-600/20 text-indigo-400 text-xs font-medium hover:bg-indigo-600/30 transition-colors cursor-pointer"
+            className="mt-2.5 px-3 py-1 rounded-lg bg-indigo-50 text-indigo-600 text-xs font-medium hover:bg-indigo-100 transition-colors cursor-pointer"
           >
             Clear filters
           </button>
@@ -94,10 +94,10 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
                   onSelectProject(project);
                 }
               }}
-              className="group text-left cursor-pointer flex flex-col h-full rounded-xl bg-slate-900/70 border border-slate-800/90 hover:border-indigo-500/50 hover:bg-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/10 overflow-hidden relative"
+              className="group text-left cursor-pointer flex flex-col h-full rounded-2xl bg-white border border-slate-200/90 hover:border-indigo-400/80 hover:bg-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-xl hover:shadow-indigo-500/10 overflow-hidden relative"
             >
               {/* Compact Thumbnail Container */}
-              <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-950">
+              <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-100">
                 {project.thumbnail ? (
                   <img
                     src={project.thumbnail}
@@ -106,19 +106,19 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
                     loading="lazy"
                   />
                 ) : (
-                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-indigo-950/40 to-slate-950 p-4 text-center">
-                    <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-1.5 group-hover:scale-110 transition-transform">
+                  <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 p-4 text-center">
+                    <div className="w-9 h-9 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 mb-1.5 group-hover:scale-110 transition-transform">
                       <Gamepad2 className="w-4 h-4" />
                     </div>
-                    <span className="text-[11px] font-semibold text-slate-300">Concept & Mechanics</span>
+                    <span className="text-[11px] font-semibold text-slate-700">Concept & Mechanics</span>
                     <span className="text-[10px] text-slate-500">Documented on Notion</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent opacity-75 group-hover:opacity-50 transition-opacity" />
                 
                 {/* Category Pill Over Thumbnail */}
                 <div className="absolute top-2.5 left-2.5">
-                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-950/85 backdrop-blur-md text-indigo-300 border border-indigo-500/20 shadow-sm">
+                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-white/95 backdrop-blur-md text-indigo-700 border border-slate-200 shadow-xs">
                     {project.category}
                   </span>
                 </div>
@@ -134,10 +134,10 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
               {/* Tile Content (Name & Description) */}
               <div className="p-3.5 sm:p-4 flex flex-col flex-1 justify-between">
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-white group-hover:text-indigo-300 transition-colors line-clamp-1 mb-1 font-heading">
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-indigo-600 transition-colors line-clamp-1 mb-1 font-heading">
                     {project.title}
                   </h3>
-                  <p className="text-slate-400 text-xs leading-relaxed line-clamp-2 mb-3">
+                  <p className="text-slate-600 text-xs leading-relaxed line-clamp-2 mb-3">
                     {project.tagline}
                   </p>
                 </div>
@@ -148,20 +148,20 @@ export default function ProjectGrid({ projects, categories, onSelectProject }) {
                     {project.tags.slice(0, 3).map((tag, idx) => (
                       <span
                         key={idx}
-                        className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700/50"
+                        className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200/80"
                       >
                         {tag}
                       </span>
                     ))}
                     {project.tags.length > 3 && (
-                      <span className="text-[10px] font-medium px-1 py-0.5 rounded bg-slate-800/60 text-slate-400">
+                      <span className="text-[10px] font-medium px-1 py-0.5 rounded bg-slate-100 text-slate-500 border border-slate-200/80">
                         +{project.tags.length - 3}
                       </span>
                     )}
                   </div>
 
                   {/* View Details prompt */}
-                  <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] font-semibold text-indigo-400 group-hover:text-indigo-300">
+                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-indigo-600 group-hover:text-indigo-700">
                     <span>View Details</span>
                     <ArrowUpRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
