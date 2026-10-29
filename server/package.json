@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
+    "build": "echo 'Backend ready'",
     "dev": "node --watch index.js"
   },
   "dependencies": {
