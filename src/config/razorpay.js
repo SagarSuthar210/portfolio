@@ -8,7 +8,7 @@
  */
 
 // Your Razorpay public key (safe for frontend — this is NOT the secret)
-export const RAZORPAY_KEY_ID = "rzp_live_XXXXXXXXXXXXXXX"; // ← Replace with your actual key_id
+export const RAZORPAY_KEY_ID = "rzp_live_TI4o48iSjZJxEa"; // ← Replace with your actual key_id
 
 // Your deployed backend URL (the /server Express app)
 // Examples:
