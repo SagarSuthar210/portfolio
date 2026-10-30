@@ -59,9 +59,9 @@ export default function ProjectModal({ project, onClose }) {
               className="w-full h-full object-cover"
             />
           ) : (
-            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-indigo-50/40 to-slate-100 p-6 text-center">
-              <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-600 mb-2 shadow-sm">
-                <Gamepad2 className="w-6 h-6" />
+            <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-amber-50/20 to-slate-100 p-6 text-center">
+              <div className="w-12 h-12 rounded-2xl bg-slate-900/5 border border-slate-900/10 flex items-center justify-center text-slate-800 mb-2 shadow-sm">
+                <Gamepad2 className="w-6 h-6 text-slate-800" />
               </div>
               <span className="text-sm font-semibold text-slate-800">Interactive Game Concept & Mechanics</span>
               <span className="text-xs text-slate-500 mt-1">Full design architecture & details available on Notion</span>
@@ -70,7 +70,7 @@ export default function ProjectModal({ project, onClose }) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           
           <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-indigo-700 shadow-md backdrop-blur-sm border border-slate-200">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/95 text-amber-800 shadow-md backdrop-blur-sm border border-amber-200/80">
               {project.category}
             </span>
           </div>
@@ -91,8 +91,8 @@ export default function ProjectModal({ project, onClose }) {
           {/* Key Features / Highlights */}
           {project.features && project.features.length > 0 && (
             <div className="mb-6 bg-slate-50 border border-slate-200/90 rounded-xl p-4">
-              <h3 className="text-xs font-bold text-indigo-600 uppercase tracking-wider mb-3 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" />
+              <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
                 Key Highlights & Capabilities
               </h3>
               <ul className="space-y-2">
@@ -109,7 +109,7 @@ export default function ProjectModal({ project, onClose }) {
           {/* Tech Stack Pills */}
           <div className="mb-6">
             <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
-              <Tag className="w-3.5 h-3.5 text-indigo-600" />
+              <Tag className="w-3.5 h-3.5 text-slate-700" />
               Technologies Used
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -151,7 +151,7 @@ export default function ProjectModal({ project, onClose }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white text-xs sm:text-sm font-semibold shadow-md shadow-indigo-600/20 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white text-xs sm:text-sm font-semibold shadow-md shadow-slate-900/20 transition-all hover:-translate-y-0.5 border border-slate-800"
             >
               <Globe className="w-4 h-4" />
               <span>{project.linkLabel || 'View Project'}</span>

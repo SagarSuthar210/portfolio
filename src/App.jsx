@@ -23,7 +23,7 @@ export default function App() {
     <div className="min-h-screen bg-[#f8fafc] text-slate-900 relative overflow-x-hidden">
       {/* Background subtle pattern & gradient highlights */}
       <div className="fixed inset-0 pointer-events-none bg-grid-pattern opacity-60 -z-10" />
-      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-indigo-100/60 via-purple-50/40 to-transparent blur-3xl pointer-events-none -z-10" />
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-amber-100/25 via-slate-100/30 to-transparent blur-3xl pointer-events-none -z-10" />
 
       {/* Main Content Area */}
       <main className="relative z-10">

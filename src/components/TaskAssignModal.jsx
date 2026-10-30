@@ -113,7 +113,7 @@ export default function TaskAssignModal({ isOpen, onClose, onToast }) {
           task: form.taskDescription.trim().substring(0, 255),
         },
         theme: {
-          color: '#6366f1', // Indigo to match portfolio theme
+          color: '#0f172a', // Sleek slate-900 to match portfolio theme
         },
         handler: async function (response) {
           // 4. Verify payment on backend
@@ -202,7 +202,7 @@ export default function TaskAssignModal({ isOpen, onClose, onToast }) {
               {/* Client Name */}
               <div>
                 <label className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 mb-1.5">
-                  <User className="w-3.5 h-3.5 text-indigo-600" />
+                  <User className="w-3.5 h-3.5 text-slate-700" />
                   Your Name
                 </label>
                 <input
@@ -218,7 +218,7 @@ export default function TaskAssignModal({ isOpen, onClose, onToast }) {
               {/* Client Email */}
               <div>
                 <label className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 mb-1.5">
-                  <Mail className="w-3.5 h-3.5 text-indigo-600" />
+                  <Mail className="w-3.5 h-3.5 text-slate-700" />
                   Your Email
                 </label>
                 <input
@@ -234,7 +234,7 @@ export default function TaskAssignModal({ isOpen, onClose, onToast }) {
               {/* Task Description */}
               <div>
                 <label className="flex items-center gap-1.5 text-xs font-semibold text-slate-700 mb-1.5">
-                  <MessageSquare className="w-3.5 h-3.5 text-indigo-600" />
+                  <MessageSquare className="w-3.5 h-3.5 text-slate-700" />
                   Task Description
                 </label>
                 <textarea
@@ -285,7 +285,7 @@ export default function TaskAssignModal({ isOpen, onClose, onToast }) {
               </div>
               <h3 className="text-lg font-bold text-slate-900 font-heading">Payment Successful!</h3>
               <p className="text-sm text-slate-600 max-w-xs">
-                Thank you! Your task has been assigned. I'll review the details and get back to you at <span className="text-indigo-600 font-semibold">{form.clientEmail}</span> shortly.
+                Thank you! Your task has been assigned. I'll review the details and get back to you at <span className="text-slate-900 font-semibold">{form.clientEmail}</span> shortly.
               </p>
             </div>
           )}
