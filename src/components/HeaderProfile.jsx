@@ -37,7 +37,7 @@ export default function HeaderProfile({ profile, onCopyToast, onOpenTaskModal })
 
       {/* 1. Profile Image (Top Middle) */}
       <div className="relative group mb-3">
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-950 shadow-xl shadow-slate-900/15 ring-1 ring-slate-900/10 transition-transform duration-300 group-hover:scale-105">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bg-gradient-to-tr from-emerald-400 via-emerald-300 to-teal-300 shadow-xl shadow-emerald-500/20 ring-1 ring-emerald-400/40 transition-transform duration-300 group-hover:scale-105">
           <img
             src={profile.avatar}
             alt={profile.name}
@@ -124,7 +124,7 @@ export default function HeaderProfile({ profile, onCopyToast, onOpenTaskModal })
           href={profile.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-black text-white font-semibold text-xs sm:text-sm shadow-md shadow-slate-900/15 hover:shadow-slate-900/30 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 border border-slate-800"
+          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-[#0a66c2] hover:bg-[#084e96] text-white font-semibold text-xs sm:text-sm shadow-md shadow-blue-500/20 hover:shadow-blue-500/35 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
         >
           <LinkedInIcon className="w-4 h-4 fill-current" />
           <span>LinkedIn</span>
