@@ -39,6 +39,42 @@ export const projectCategories = [
 
 export const projectsData = [
   {
+    id: "builderhut",
+    title: "BuilderHut",
+    category: "Backend & SaaS",
+    tagline: "AI-powered land feasibility platform that evaluates parcels, bringing up economic & context-aware paths in seconds.",
+    description: "BuilderHut fuses geospatial infrastructure data, high-resolution satellite imagery, nearby commercial points of interest, and grounded economic & municipal regulatory data into a single stream of AI reasoning. It delivers rich, data-backed feasibility reports, assists users in listing and discovering parcels under specific contextual constraints, and creates complex AI real estate portfolios with simplified decision-making.",
+    thumbnail: "./projects/builderhut.png",
+    tags: ["AI Intelligence", "Geospatial Data", "Satellite Imagery", "Full-Stack SaaS", "FastAPI", "React"],
+    features: [
+      "Multi-modal fusion of geospatial, zoning, infrastructure, and satellite imagery",
+      "Instant economic and context-aware land feasibility generation",
+      "Portfolio decision engine evaluating listed parcels against custom feasibility constraints",
+      "End-to-end scalable backend architecture with grounded regulatory data streams"
+    ],
+    liveUrl: "https://builderhut.co",
+    linkLabel: "Visit Live Platform",
+    githubUrl: null, // Codebase private
+  },
+  {
+    id: "geoslick-ai",
+    title: "GeoSlick AI",
+    category: "AI & Data Science",
+    tagline: "Web-based decision-support system for offshore oil spill detection using Sentinel-1 SAR imagery and U-Net.",
+    description: "A comprehensive oil spill monitoring system. An analyst defines an Area of Interest (AOI) on a Sentinel-1 SAR scene, and a custom four-level U-Net deep learning model segments oil-slick pixels. Slicks are traced backward in time using Copernicus Marine ocean currents and ECMWF ERA5 wind vectors to estimate origin points, matching nearby AIS vessel positions to rank attribution leads.",
+    thumbnail: "./projects/geoslick.png",
+    tags: ["PyTorch", "U-Net", "Sentinel-1 SAR", "Copernicus Marine", "AIS Tracking", "Flask", "Gemini API"],
+    features: [
+      "Four-level U-Net segmentation trained with BCE + Dice loss on SAR image-mask pairs",
+      "Backward drift tracing converting surface current and ERA5 wind vectors into pixel displacements",
+      "AIS vessel trajectory attribution scoring and top-15 lead candidate ranking",
+      "Interactive Flask & Canvas frontend with integrated Gemini intelligence summaries"
+    ],
+    liveUrl: "https://standing-neighbor-7b2.notion.site/Data-Science-ML-projects-2cf612181d6180559945e760a5b711e3?pvs=74",
+    linkLabel: "View Notion Case Study",
+    githubUrl: null,
+  },
+  {
     id: "the-nyc-fashion",
     title: "The NYC Fashion",
     category: "Frontend & Web",
@@ -75,24 +111,6 @@ export const projectsData = [
     githubUrl: null,
   },
   {
-    id: "builderhut",
-    title: "BuilderHut",
-    category: "Backend & SaaS",
-    tagline: "AI-powered land feasibility platform that evaluates parcels, bringing up economic & context-aware paths in seconds.",
-    description: "BuilderHut fuses geospatial infrastructure data, high-resolution satellite imagery, nearby commercial points of interest, and grounded economic & municipal regulatory data into a single stream of AI reasoning. It delivers rich, data-backed feasibility reports, assists users in listing and discovering parcels under specific contextual constraints, and creates complex AI real estate portfolios with simplified decision-making.",
-    thumbnail: "./projects/builderhut.png",
-    tags: ["AI Intelligence", "Geospatial Data", "Satellite Imagery", "Full-Stack SaaS", "FastAPI", "React"],
-    features: [
-      "Multi-modal fusion of geospatial, zoning, infrastructure, and satellite imagery",
-      "Instant economic and context-aware land feasibility generation",
-      "Portfolio decision engine evaluating listed parcels against custom feasibility constraints",
-      "End-to-end scalable backend architecture with grounded regulatory data streams"
-    ],
-    liveUrl: "https://builderhut.co",
-    linkLabel: "Visit Live Platform",
-    githubUrl: null, // Codebase private
-  },
-  {
     id: "neoeternal",
     title: "NeoEternal",
     category: "Game Dev & 3D",
@@ -107,24 +125,6 @@ export const projectsData = [
       "Full technical Game Design Document (GDD) & obstacle hierarchy"
     ],
     liveUrl: "https://standing-neighbor-7b2.notion.site/Game-projects-2cf612181d6180eb86facaa7c7af7e7e?pvs=74",
-    linkLabel: "View Notion Case Study",
-    githubUrl: null,
-  },
-  {
-    id: "geoslick-ai",
-    title: "GeoSlick AI",
-    category: "AI & Data Science",
-    tagline: "Web-based decision-support system for offshore oil spill detection using Sentinel-1 SAR imagery and U-Net.",
-    description: "A comprehensive oil spill monitoring system. An analyst defines an Area of Interest (AOI) on a Sentinel-1 SAR scene, and a custom four-level U-Net deep learning model segments oil-slick pixels. Slicks are traced backward in time using Copernicus Marine ocean currents and ECMWF ERA5 wind vectors to estimate origin points, matching nearby AIS vessel positions to rank attribution leads.",
-    thumbnail: "./projects/geoslick.png",
-    tags: ["PyTorch", "U-Net", "Sentinel-1 SAR", "Copernicus Marine", "AIS Tracking", "Flask", "Gemini API"],
-    features: [
-      "Four-level U-Net segmentation trained with BCE + Dice loss on SAR image-mask pairs",
-      "Backward drift tracing converting surface current and ERA5 wind vectors into pixel displacements",
-      "AIS vessel trajectory attribution scoring and top-15 lead candidate ranking",
-      "Interactive Flask & Canvas frontend with integrated Gemini intelligence summaries"
-    ],
-    liveUrl: "https://standing-neighbor-7b2.notion.site/Data-Science-ML-projects-2cf612181d6180559945e760a5b711e3?pvs=74",
     linkLabel: "View Notion Case Study",
     githubUrl: null,
   },
